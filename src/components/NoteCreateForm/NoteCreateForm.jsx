@@ -9,7 +9,7 @@ const NoteCreateForm = ({ token }) => {
 
   const [title, setTitle] = useState('');
   const [text, setText] = useState('');
-  const [category, setCategory] = useState('');
+  const [categoryId, setCategoryId] = useState('');
   const [file, setFile] = useState();
   const [errMsg, setErrMsg] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -18,7 +18,8 @@ const NoteCreateForm = ({ token }) => {
       e.preventDefault();
       setLoading(true);
 
-      await createnoteService(title, text, category, file, token);
+      await createnoteService(title, text, categoryId, file, token);
+
       //redireccionar a la pagina principal
       navigate('/');
     } catch (err) {
@@ -34,6 +35,7 @@ const NoteCreateForm = ({ token }) => {
       <input
         type='text'
         id='title'
+        required
         value={title}
         onChange={(e) => setTitle(e.target.value)}
       />
@@ -47,15 +49,16 @@ const NoteCreateForm = ({ token }) => {
         required
       />
 
-      <label htmlFor='category'>Categoria:</label>
-      <input
-        type='text'
-        id='category'
-        value={category}
-        onChange={(e) => setCategory(e.target.value)}
-        autoFocus
+      <select
+        name='category'
+        value={categoryId}
+        onChange={(e) => setCategoryId(e.target.value)}
         required
-      />
+      >
+        <option value=''>Selecciona una categoria</option>
+        <option value='1'>Lista compra</option>
+        <option value='2'>pelis</option>
+      </select>
 
       <input type='file' onChange={(e) => setFile(e.target.files[0])} />
       <button disabled={loading}>Guardar</button>

@@ -1,12 +1,15 @@
-const createnoteService = async (title, text, category, file, token) => {
+const createnoteService = async (title, text, categoryId, file, token) => {
   //si quremos mandar un bofy form data es necesario crear objeto de este mismo tipo y pushera en el los elementos
   //que queremos enviar
 
   const formData = new FormData();
-  console.log(category);
+  console.log(title);
+  console.log(text);
+  console.log(categoryId);
+  console.log(token);
   formData.append('title', title);
   formData.append('text', text);
-  formData.append('category', category);
+  formData.append('categoryId', categoryId);
   if (file) formData.append('image', file);
   const res = await fetch('http://localhost:8000/notes', {
     method: 'post',
