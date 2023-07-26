@@ -1,0 +1,6 @@
+div.app > footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--blue-color);
+    color: white;
+}
