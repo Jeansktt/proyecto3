@@ -8,7 +8,10 @@ const NoteSearch = () => {
 
   return (
     <main className='tweet-search'>
-      <h2>listado de notas</h2>
+      <div className='head'>
+        <h2>listado de notas</h2>
+        <NavLink to='/'>Volver</NavLink>
+      </div>
       <ul>
         {notes.length > 0 ? (
           notes.map((note) => {
@@ -18,9 +21,6 @@ const NoteSearch = () => {
           <li>no se encuentran notas</li>
         )}
       </ul>
-      <div>
-              <NavLink to='/'>Volver</NavLink>
-            </div>
     </main>
   );
 };

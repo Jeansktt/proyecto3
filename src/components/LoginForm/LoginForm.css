@@ -10,11 +10,11 @@ label {
 }
 input {
   border: 0;
-  margin-top: 1rem;
+  margin-top: 3rem;
   border-bottom: 2px solid #008cba;
 }
 button {
-  margin-top: 1rem;
+  margin-top: 8rem;
   background-color: #008cba;
   border: none;
   padding: 15px 32px;

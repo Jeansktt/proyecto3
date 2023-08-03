@@ -15,7 +15,7 @@ div.home-page {
   display: grid;
   place-items: center;
 }
-p {
+.home-page p:nth-child(2) {
   display: grid;
   justify-content: center;
   margin-left: 2rem;
@@ -47,6 +47,7 @@ nav > p {
   display: inline-block;
   font-size: 16px;
   text-decoration: none;
+  margin-left: 10px;
 }
 .button-register {
   display: flex;
@@ -59,6 +60,7 @@ nav > p {
   display: inline-block;
   font-size: 16px;
   text-decoration: none;
+  margin-right: 10px;
 }
 
 nav.buttons {
@@ -118,13 +120,8 @@ nav.buttons > p {
   text-align: center;
   font-size: 16px;
   width: 5rem;
-  margin-left: 2rem;
+  margin-left: 1rem;
 }
-/*
-
-
-
- */
 
 /*
 .button-login{

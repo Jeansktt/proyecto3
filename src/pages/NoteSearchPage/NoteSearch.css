@@ -1,0 +1,59 @@
+.note {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  text-align: center;
+}
+h2 {
+  text-align: center;
+}
+header {
+  display: grid;
+}
+header > p {
+  grid-column: 1 / span 2;
+  margin-bottom: 15px;
+}
+time {
+  grid-column: 3 / span 4;
+  align-items: center;
+  justify-items: center;
+}
+header {
+  text-align: center;
+  align-items: center;
+}
+.contenido p:nth-child(1) {
+  color: #6d95c8;
+  margin-bottom: 10px;
+}
+.contenido p:nth-child(2) {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.foot-note {
+  margin-top: 1rem;
+  background-color: #008cba;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  text-decoration: none;
+  margin-bottom: 18rem;
+}
+
+li > header {
+  background-color: #c7b531;
+}
+.head {
+  display: grid;
+  grid-column: auto auto;
+}
+
+.head a:nth-child(2) {
+  background-color: #008cba;
+  text-align: center;
+  margin-bottom: 10px;
+}

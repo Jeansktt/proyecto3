@@ -15,19 +15,19 @@ const Note = ({ note }) => {
           })}
         </time>
       </header>
-      <div>
+      <div className='contenido'>
         <p>{note.title}</p>
         <p>{note.text}</p>
         {note.image && (
           <img
-            src={`http://localhost:3000/${note.image}`}
+            src={`http://localhost:8000/${note.image}`}
             alt='imagen adjunta a la nota'
           />
         )}
       </div>
-      <footer>
+      <div className='foot-note'>
         <NavLink to={`/edit/${note.id}`}>Editar</NavLink>
-      </footer>
+      </div>
     </li>
   );
 };
