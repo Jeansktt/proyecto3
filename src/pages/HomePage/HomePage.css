@@ -25,10 +25,6 @@ div.home-page {
   font-size: 24px;
 }
 
-nav > p {
-  margin: auto;
-}
-
 .buttons {
   display: grid;
   gap: 20px;
@@ -122,7 +118,34 @@ nav.buttons > p {
   width: 5rem;
   margin-left: 1rem;
 }
-
+@media (min-width: 600px) {
+  .button-message {
+    margin-left: 70px;
+  }
+  .button-notes {
+    margin-left: 70px;
+  }
+  .button-close {
+    margin-right: 70px;
+  }
+  .button-edit {
+    margin-left: 50px;
+  }
+}
+@media (min-width: 1200px) {
+  .button-message {
+    margin-left: 90px;
+  }
+  .button-notes {
+    margin-left: 90px;
+  }
+  .button-close {
+    margin-right: 70px;
+  }
+  .button-edit {
+    margin-left: 170px;
+  }
+}
 /*
 .button-login{
     

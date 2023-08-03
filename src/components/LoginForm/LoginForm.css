@@ -24,3 +24,9 @@ button {
   font-size: 16px;
   text-decoration: none;
 }
+
+@media (max-width: 1200px) {
+  form {
+    margin-top: 13rem;
+  }
+}

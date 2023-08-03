@@ -5,3 +5,8 @@
 button {
   margin-bottom: 11rem;
 }
+@media (min-width: 1200px) {
+  button {
+    margin-bottom: 2rem;
+  }
+}
