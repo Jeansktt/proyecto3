@@ -1,6 +1,92 @@
-div.app > footer {
-    text-align: center;
-    padding: 2rem;
-    background-color: var(--blue-color);
-    color: white;
+/* div.app > footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--blue-color);
+  color: black;
+}
+
+footer {
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  color: white;
+} */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: #ffe501;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-link {
+  margin-right: 20px;
+  color: #ffe501;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.footer-logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.footer-social {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.footer-social-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.footer-social-icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.footer-social-link {
+  color: #ffe501;
+  text-decoration: none;
+}
+
+.footer-disclaimer {
+  margin-top: 20px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* Modificaciones para el contenedor del Dashboard */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.map-container {
+  flex: 1;
+  position: relative;
 }

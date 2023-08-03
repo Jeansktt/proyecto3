@@ -3,6 +3,7 @@ import ErrorMessage from '../ErrorMessage/ErrorMessage';
 import { useNavigate } from 'react-router-dom';
 import createnoteService from '../../services/createnoteService';
 import PropTypes from 'prop-types';
+import './NoteCreateForm.css';
 
 const NoteCreateForm = ({ token }) => {
   const navigate = useNavigate();
@@ -50,6 +51,7 @@ const NoteCreateForm = ({ token }) => {
       />
 
       <select
+        className='categoria'
         name='category'
         value={categoryId}
         onChange={(e) => setCategoryId(e.target.value)}

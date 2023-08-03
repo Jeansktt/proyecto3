@@ -2,7 +2,7 @@ import { useState } from 'react';
 import registerService from '../../services/registerService';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
 import { useNavigate } from 'react-router-dom';
-
+import './RegisterForm.css';
 const RegisterForm = () => {
   const navigate = useNavigate();
   const [username, setUsername] = useState('');
@@ -54,7 +54,7 @@ const RegisterForm = () => {
         autoFocus
         required
       />
-      <button>Loguearse</button>
+      <button>Registrarse</button>
 
       {errMsg && <ErrorMessage msg={errMsg} />}
     </form>

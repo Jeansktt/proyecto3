@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-
+import { NavLink } from 'react-router-dom';
 const Note = ({ note }) => {
   return (
     <li className='note'>
@@ -20,13 +20,13 @@ const Note = ({ note }) => {
         <p>{note.text}</p>
         {note.image && (
           <img
-            src={`http://localhost:8000/${note.image}`}
+            src={`http://localhost:3000/${note.image}`}
             alt='imagen adjunta a la nota'
           />
         )}
       </div>
       <footer>
-        <p>en construccion</p>
+        <NavLink to={`/edit/${note.id}`}>Editar</NavLink>
       </footer>
     </li>
   );

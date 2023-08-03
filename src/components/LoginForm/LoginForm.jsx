@@ -2,7 +2,7 @@ import { useState } from 'react';
 import PropTypes from 'prop-types';
 import loginService from '../../services/loginService';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
-
+import './LoginForm.css';
 const LoginForm = ({ login }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
