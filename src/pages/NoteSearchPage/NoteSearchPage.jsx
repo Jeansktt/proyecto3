@@ -1,10 +1,12 @@
 //import './NoteSearch.css';
 import useNotes from '../../hooks/useNotes';
 import Note from '../../components/Note/Note';
+import useAuth from '../../hooks/useAuth';
 import { NavLink } from 'react-router-dom';
 import './NoteSearch.css';
 const NoteSearch = () => {
   const { notes } = useNotes();
+  const { user } = useAuth();
 
   return (
     <main className='tweet-search'>

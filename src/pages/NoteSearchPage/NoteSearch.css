@@ -59,9 +59,9 @@ li > header {
 }
 @media (min-width: 600px) {
   li {
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
   .foot-note {
-    margin-bottom: 34rem;
+    margin-bottom: 0;
   }
 }
