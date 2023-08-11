@@ -18,7 +18,6 @@ const noteService = {
     return res.json();
   },
 
-  // Editar una nota existente
   editNote: async (noteId, data, token) => {
     const res = await fetch(`${BASE_URL}/notes/${noteId}`, {
       method: 'PUT',

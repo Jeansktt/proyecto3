@@ -33,9 +33,6 @@ const HomePage = () => {
             <div className='button-notes'>
               <NavLink to='/notes'>Ver Notas</NavLink>
             </div>
-            <div className='button-edit'>
-              <NavLink to='/edit'>Editar notas</NavLink>
-            </div>
           </>
         )}
       </nav>
