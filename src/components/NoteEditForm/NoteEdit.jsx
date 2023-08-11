@@ -14,12 +14,10 @@ const NoteCreateForm = ({ token, noteToEdit }) => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    // Si noteToEdit tiene valores, establece los estados con los valores de la nota a editar
     if (noteToEdit) {
       setTitle(noteToEdit.title);
       setText(noteToEdit.text);
       setCategoryId(noteToEdit.categoryId);
-      // No actualizamos el estado del archivo ya que no lo estamos mostrando en el formulario de edición
     }
   }, [noteToEdit]);
 
@@ -28,19 +26,9 @@ const NoteCreateForm = ({ token, noteToEdit }) => {
       e.preventDefault();
       setLoading(true);
 
-      // Si noteToEdit existe, estamos editando una nota
       if (noteToEdit) {
-        // Lógica para editar la nota utilizando el token y los valores del formulario
-        // ...
-
-        // Redireccionar a la página principal
         navigate('/');
       } else {
-        // Si noteToEdit no existe, estamos creando una nueva nota
-        // Lógica para crear una nueva nota utilizando el token y los valores del formulario
-        // ...
-
-        // Redireccionar a la página principal
         navigate('/');
       }
     } catch (err) {
@@ -53,14 +41,13 @@ const NoteCreateForm = ({ token, noteToEdit }) => {
   return (
     <form onSubmit={handleSubmit}>
       <h2>{noteToEdit ? 'Editar' : 'Crear'} tu nota de viaje</h2>
-      {/* Resto del formulario */}
     </form>
   );
 };
 
 NoteCreateForm.propTypes = {
   token: PropTypes.string,
-  noteToEdit: PropTypes.object, // Objeto de la nota a editar
+  noteToEdit: PropTypes.object,
 };
 
 export default NoteCreateForm;

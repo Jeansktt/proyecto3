@@ -39,11 +39,9 @@ const useNotes = () => {
       }
     };
 
-    // Obtenemos las notas solo si existe el token.
     if (token) fetchNotes();
   }, [searchParams]);
 
-  //funcion eliminar una nota
   return { notes, searchParams, setsearchParams, errorMsg, loading };
 };
 export default useNotes;

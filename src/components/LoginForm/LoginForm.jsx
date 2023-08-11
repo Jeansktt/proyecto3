@@ -14,7 +14,7 @@ const LoginForm = ({ login }) => {
       setLoading(true);
 
       const token = await loginService(email, password);
-      //si llega hasta aqui el usuario se ha registrado correctamente
+
       login(token);
     } catch (err) {
       setErrMsg(err.message);

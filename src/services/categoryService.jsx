@@ -1,7 +1,4 @@
 const categoryService = async (name, token) => {
-  //si quremos mandar un bofy form data es necesario crear objeto de este mismo tipo y pushera en el los elementos
-  //que queremos enviar
-
   const formData = new FormData();
   console.log(name);
   console.log(token);

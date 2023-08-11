@@ -16,7 +16,7 @@ const RegisterForm = () => {
       e.preventDefault();
       setLoading(true);
       await registerService(username, email, password);
-      //si llega hasta aqui el usuario se ha registrado correctamente
+
       navigate('/login');
     } catch (err) {
       setErrMsg(err.message);

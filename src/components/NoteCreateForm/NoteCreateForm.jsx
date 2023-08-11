@@ -21,7 +21,6 @@ const NoteCreateForm = ({ token }) => {
 
       await createnoteService(title, text, categoryId, file, token);
 
-      //redireccionar a la pagina principal
       navigate('/');
     } catch (err) {
       setErrMsg(err.message);
