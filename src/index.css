@@ -3,11 +3,14 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: 0;
   font-family: 'Oswald', sans-serif;
   color: inherit;
   text-decoration: inherit;
+  font-size: 20px;
 }
 :root {
   --blue-color: #ffe501;
+}
+h1 {
+  font-size: 20px;
 }

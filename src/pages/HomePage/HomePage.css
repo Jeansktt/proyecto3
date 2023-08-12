@@ -14,6 +14,7 @@ div.home-page {
   height: auto;
   display: grid;
   place-items: center;
+  font-size: 20px;
 }
 .home-page p:nth-child(2) {
   display: grid;

@@ -71,8 +71,9 @@ const NoteCreateForm = () => {
         required
       >
         <option value=''>Selecciona una categoria</option>
-        <option value='1'>Lista compra</option>
-        <option value='2'>pelis</option>
+        <option value='1'>Viaje en pareja</option>
+        <option value='2'>Viaje solo</option>
+        <option value='3'>Viaje en familia</option>
       </select>
 
       <input type='file' onChange={(e) => setFile(e.target.files[0])} />
