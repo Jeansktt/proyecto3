@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 
 const getCategoryName = (categoryId) => {
@@ -15,6 +16,10 @@ const getCategoryName = (categoryId) => {
 };
 
 const Note = ({ note }) => {
+  const imageUrl = note.image
+    ? `http://localhost:8000/uploads_dir/${note.image}`
+    : null;
+
   return (
     <li className='note'>
       <header>
@@ -33,12 +38,10 @@ const Note = ({ note }) => {
         <p>{note.title}</p>
         <p>{note.text}</p>
         <p>{getCategoryName(note.categoryId)}</p>
-        {note.image && (
-        <img
-        src={`http://localhost:8000/uploads_dir/${note.image}`}
-        alt='imagen adjunta a la nota'
-      />
-      
+        {imageUrl && (
+          <div>
+            <img src={imageUrl} alt='imagen adjunta a la nota' />
+          </div>
         )}
       </div>
       <div className='foot-note'>
@@ -48,4 +51,17 @@ const Note = ({ note }) => {
   );
 };
 
+Note.propTypes = {
+  note: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    username: PropTypes.string.isRequired,
+    createdAt: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
+    categoryId: PropTypes.number.isRequired,
+    image: PropTypes.string,
+  }).isRequired,
+};
+
 export default Note;
+

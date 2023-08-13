@@ -8,7 +8,7 @@ const NoteSearchPage = () => {
   const { notes } = useNotes();
   
   return (
-    <main className='tweet-search'>
+    <main className='note-search'>
       <div className='head'>
         <h2>listado de notas</h2>
         <NavLink to='/'>Volver</NavLink>
