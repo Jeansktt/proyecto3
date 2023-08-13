@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
@@ -70,11 +70,17 @@ const NoteCreateForm = () => {
         onChange={(e) => setCategoryId(e.target.value)}
         required
       >
-        <option value=''>Selecciona una categoria</option>
-        <option value='1'>Viaje en pareja</option>
-        <option value='2'>Viaje solo</option>
-        <option value='3'>Viaje en familia</option>
-      </select>
+      
+  <option value=''>Selecciona una categoria</option>
+  <option value='1'>Cultura y Patrimonio</option>
+  <option value='2'>Naturaleza y Paisajes</option>
+  <option value='3'>Aventuras y Exploración</option>
+  <option value='4'>Gastronomía y Experiencias Culinarias</option>
+  <option value='5'>Negocios y Viajes de Trabajo</option>
+  <option value='6'>Historia y Tradiciones</option>
+  <option value='7'>Consejos y Recomendaciones de Viaje</option>
+  <option value='8'>Alojamiento y Hospedaje</option>
+</select>
 
       <input type='file' onChange={(e) => setFile(e.target.files[0])} />
       <button disabled={loading}>Guardar</button>
