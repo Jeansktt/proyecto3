@@ -1,7 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
 div.app > footer {
   text-align: center;
   padding: 2rem;
+  position: fixed;
+  left: 0;
   bottom: 0;
-  background-color: var(--blue-color);
-  color: black;
+  width: 100%;
+  background-color: #008cba;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.2);
 }

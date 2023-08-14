@@ -1,14 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
+/* Estilos para el encabezado */
 div.app > header {
-  background-color: var(--blue-color);
+  background-color: #008cba;
   padding: 2rem;
-  color: black;
+  color: white;
   text-align: center;
-  font-family: 'Oswald', sans-serif;
-  width: auto;
-  border: 2px solid;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  border-bottom: 3px solid #006a86;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+/* Estilos para el título del encabezado */
+div.app > header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Estilos para el subtítulo del encabezado */
+div.app > header p {
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+/* Estilos globales */
 * {
   font-size: 20px;
 }
+

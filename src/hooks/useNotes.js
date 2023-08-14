@@ -1,4 +1,3 @@
-import { useSearchParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import useAuth from './useAuth';
 
@@ -6,8 +5,8 @@ const useNotes = () => {
   const { token } = useAuth();
 
   const [notes, setNotes] = useState([]);
-  const [errorMsg, seterrorMessage] = useState('');
-  const [searchParams, setsearchParams] = useSearchParams();
+  const [errorMsg, setErrorMessage] = useState('');
+  const [searchParams, setSearchParams] = useState(new URLSearchParams());
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -17,7 +16,6 @@ const useNotes = () => {
 
         const res = await fetch(
           `http://localhost:8000/notes?${searchParams.toString()}`,
-
           {
             headers: {
               Authorization: token,
@@ -33,15 +31,19 @@ const useNotes = () => {
 
         setNotes(body.data.notes);
       } catch (err) {
-        seterrorMessage(err.message);
+        setErrorMessage(err.message);
       } finally {
         setLoading(false);
       }
     };
 
-    if (token) fetchNotes();
-  }, [searchParams]);
+    if (token) {
+      fetchNotes();
+    }
+  }, [searchParams, token]);
 
-  return { notes, searchParams, setsearchParams, errorMsg, loading };
+  return { notes, searchParams, setSearchParams, errorMsg, loading };
 };
+
 export default useNotes;
+

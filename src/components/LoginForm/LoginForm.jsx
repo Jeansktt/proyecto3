@@ -43,7 +43,7 @@ const LoginForm = ({ login }) => {
         autoFocus
         required
       />
-      <button>Loguearse</button>
+      <button>Login</button>
 
       {errMsg && <ErrorMessage msg={errMsg} />}
     </form>

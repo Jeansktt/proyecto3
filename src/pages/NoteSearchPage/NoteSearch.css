@@ -1,67 +1,100 @@
+/* Estilo para las notas */
+.note-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 2rem;
+}
+
 .note {
+  width: calc(50% - 5px);
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0.3rem;
   display: grid;
   grid-template-rows: auto auto auto;
-  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
 }
+
+.note:hover {
+  transform: translateY(-3px);
+}
+
 h2 {
-  text-align: center;
+  font-size: 18px;
+  margin-top: 0;
+  color: #333;
 }
+
 header {
   display: grid;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 0.3rem;
 }
+
 header > p {
-  grid-column: 1 / span 2;
-  margin-bottom: 15px;
+  font-size: 14px;
+  color: #555;
+  margin: 0;
 }
+
 time {
-  grid-column: 3 / span 4;
-  align-items: center;
-  justify-items: center;
+  font-size: 12px;
+  color: #777;
+  align-self: center;
 }
-header {
-  text-align: center;
-  align-items: center;
-}
+
 .contenido p:nth-child(1) {
-  color: #6d95c8;
-  margin-bottom: 10px;
+  color: #1b4f72;
+  margin: 0;
+  font-weight: bold;
 }
+
 .contenido p:nth-child(2) {
-  margin-top: 0;
-  margin-bottom: 10px;
+  margin: 0;
 }
 
 .foot-note {
-  margin-top: 1rem;
-  background-color: #008cba;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1b4f72;
   border: none;
-  padding: 15px 32px;
+  padding: 4px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  text-decoration: none;
-  margin-bottom: 18rem;
+  font-size: 12px;
+  color: white;
+  cursor: pointer;
+  border-radius: 0 0 5px 5px;
+  transition: background-color 0.3s;
 }
 
-li > header {
-  background-color: #c7b531;
-}
-.head {
-  display: grid;
-  grid-column: auto auto;
+.foot-note:hover {
+  background-color: #154267;
 }
 
-.head a:nth-child(2) {
-  background-color: #008cba;
+.back-button {
   text-align: center;
-  margin-bottom: 10px;
+  margin-top: 2rem;
 }
-@media (min-width: 600px) {
-  li {
-    margin-top: 1rem;
-  }
-  .foot-note {
-    margin-bottom: 0;
-  }
+
+
+.back-button > a {
+  background-color: #1b4f72;
+  padding: 6px 12px;
+  text-decoration: none;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+.back-button > a:hover {
+  background-color: #154267;
 }

@@ -40,7 +40,10 @@ const Note = ({ note }) => {
         <p>{getCategoryName(note.categoryId)}</p>
         {imageUrl && (
           <div>
-            <img src={imageUrl} alt='imagen adjunta a la nota' />
+            <img
+              src={`http://localhost:8000/uploads_dir/${note.image}`}
+              alt='imagen adjunta a la nota'
+            />
           </div>
         )}
       </div>
