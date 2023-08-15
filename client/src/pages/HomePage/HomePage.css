@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+div.home-page {
+    font-family: 'Oswald', sans-serif;
+    background-color: #ede055;
+    min-height: 100vh;
+    display: grid;
+    gap: 20px;
+    flex-direction: column;
+    grid-auto-rows: minmax(50px, 50px, 50px);
+}
+.home-page > h1 {
+    margin-top: 0;
+    height: auto;
+    display: grid;
+    place-items: center;
+    font-size: 40px;
+}
+.home-page p:nth-child(2) {
+    display: grid;
+    justify-content: center;
+    margin-left: 2rem;
+    margin-right: 1rem;
+    height: auto;
+    margin-top: 1rem;
+    font-size: 24px;
+}
+
+.buttons {
+    display: grid;
+    gap: 20px;
+    height: 40px;
+    align-items: center;
+}
+
+.button-login {
+    margin-top: 8rem;
+    background-color: #07ce0d;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button-register {
+    margin-top: 8rem;
+    background-color: #008cba;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+nav.buttons {
+    grid-template-columns: auto auto;
+
+    text-align: center;
+    align-content: center;
+}
+nav.buttons > p {
+    font-size: 32px;
+    grid-column: 1 / span 3;
+}
+.button-message {
+    grid-column: 1 / span 2;
+    margin-top: 8rem;
+    position: relative;
+    top: -130px;
+    left: 500px;
+    background-color: #008cba;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    width: 5rem;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+.button-notes {
+    grid-column: 1 / span 2;
+    margin-top: 0rem;
+    background-color: #008cba;
+    border: none;
+    position: relative;
+    top: -140px;
+    left: 500px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    width: 5rem;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+.button-close > p {
+    grid-column: auto;
+    margin-top: 1px;
+    margin-top: 1rem;
+    position: relative;
+    top: -40px;
+    left: -160px;
+    background-color: #e81a08;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 22px;
+    text-decoration: none;
+    width: 7rem;
+    cursor: pointer;
+}
+.button-edit {
+    grid-column: auto;
+    align-content: center;
+    margin-top: 1rem;
+    background-color: #008cba;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    width: 5rem;
+    margin-left: 1rem;
+}
+@media (min-width: 600px) {
+    .button-message {
+        margin-left: 70px;
+    }
+    .button-notes {
+        margin-left: 70px;
+    }
+    .button-close {
+        margin-right: 70px;
+    }
+    .button-edit {
+        margin-left: 50px;
+    }
+}
+@media (min-width: 1200px) {
+    .button-message {
+        margin-left: 90px;
+    }
+    .button-notes {
+        margin-left: 90px;
+    }
+    .button-close {
+        margin-right: 70px;
+    }
+    .button-edit {
+        margin-left: 170px;
+    }
+}
